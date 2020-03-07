@@ -1,5 +1,6 @@
+@Func2 @Info1
 Feature: Verifying adactin details
-
+@Reg
   Scenario Outline: Verifying login details with invalid credentials
     Given User is on adactin page
     When User enters "<userName>" and "<password>"
