@@ -1,5 +1,5 @@
 package com.stepdefinition1;
-
+ 
 import java.io.IOException;
 
 import org.openqa.selenium.Alert;
@@ -14,35 +14,26 @@ public class AdactinPageBase extends BaseClass {
 PageObjectManager page;
 	@Given("User is on adactin page")
 	public void user_is_on_adactin_page() throws InterruptedException {
-		
-			} 
-
+					} 
 	@When("User enters {string} and {string}")
 	public void user_enters_and(String s1, String s2) {
 		page=new PageObjectManager();
-		
-		type(page.getLoginPage().getTextUserName(), s1);
-
+				type(page.getLoginPage().getTextUserName(), s1);
 		WebElement pass = page.getLoginPage().getTextpassword();
 		type(pass, s2);
-		
-	}
-
+			}
 	@When("User should click the login button")
 	public void user_should_click_the_login_button() {
 		btnclick(page.getLoginPage().getBtnlogin());
-		
-	}
+			}
 
 	@When("User should select the  {string},{string},{string},{string}")
 	public void user_should_select_the(String loc, String h, String romtyp, String nor) throws InterruptedException {
-	page=new PageObjectManager();
+	
 		WebElement local = page.getsearchHotelPage().getLoc();
 		selectByAttribute(local,loc);
 		WebElement hotel = page.getsearchHotelPage().getHotel();
 		selectByAttribute(hotel, h);
-		
-
 		WebElement room = page.getsearchHotelPage().getRomTyp();
 	selectByAttribute(room, romtyp);
 

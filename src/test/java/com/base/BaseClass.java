@@ -33,7 +33,7 @@ screensShot();
 	}
 	public void btnclick(WebElement element) {
 element.click();
-
+element.
 	}
 
 	public void type(WebElement element, String name) {
