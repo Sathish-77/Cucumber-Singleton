@@ -11,6 +11,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = { "src\\test\\resources" }, glue = {
 		"com\\stepdefinition1" }, monochrome = true, plugin = { "json:src\\test\\resources\\Reporting\\cucumber.json" })
+
 public class Runner {
 	@AfterClass
 	public static void afterClass() {
